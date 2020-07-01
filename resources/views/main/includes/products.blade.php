@@ -16,9 +16,10 @@
                             <!-- Nav tabs -->
                             <nav>
                                 <div class="nav nav-tabs d-inline-block justify-content-md-end" id="nav-tab"
-                                     role="tablist"><a class="nav-item nav-link active" id="nav-tab1"
-                                                       data-toggle="tab" href="#tab1-1" role="tab"
-                                                       aria-selected="true">New Product</a>
+                                     role="tablist"><a class="nav-item nav-link active" id="nav-tab1" data-toggle="tab"
+                                                       href="#tab1-1" role="tab" aria-selected="true">Top Rated</a>
+                                    <a class="nav-item nav-link" id="nav-tab2" data-toggle="tab" href="#tab1-2"
+                                       role="tab" aria-selected="false">New Product</a>
                                 </div>
                             </nav>
                         </div>
@@ -28,6 +29,16 @@
                             <!-- Tab panes -->
                             <div class="tab-content p-0" id="nav-tabContent">
                                 <div role="tabpanel" class="tab-pane fade show active" id="tab1-1">
+                                    <div class="owl-carousel no-pb owl-2" data-dots="false" data-nav="true"
+                                         data-items="3" data-lg-items="3" data-md-items="2" data-sm-items="1">
+                                        @foreach($productsRated as $product)
+                                            <div class="item">
+                                                @include('shop.includes.product-card')
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tab1-2">
                                     <div class="owl-carousel no-pb owl-2" data-dots="false" data-nav="true"
                                          data-items="3" data-lg-items="3" data-md-items="2" data-sm-items="1">
                                         @foreach($products as $product)

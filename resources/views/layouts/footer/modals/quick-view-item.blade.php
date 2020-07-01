@@ -5,6 +5,7 @@
             <img class="img-fluid rounded" src="/storage/{{ $product->image}}" alt=""/>
         </div>
         <div class="col-lg-7 col-12 mt-5 mt-lg-0">
+            <span class="card-wrapper">
             <div class="product-details">
                 <h3 class="mb-0">{{ $product->title}}</h3>
                 <div class="star-rating mb-4">
@@ -39,7 +40,7 @@
                     <div class="d-flex align-items-center mr-sm-4">
                         <button class="btn-product btn-product-up"><i class="las la-minus"></i>
                         </button>
-                        <input class="form-product" type="number" name="form-product" value="1">
+                        <input class="form-product product-qty" type="number" name="form-product" value="1">
                         <button class="btn-product btn-product-down"><i class="las la-plus"></i>
                         </button>
                     </div>
@@ -64,11 +65,12 @@
                 </div>
             </div>
             <div class="d-sm-flex align-items-center mt-5">
-                <button class="btn btn-cart btn-primary btn-animated mr-sm-4 mb-3 mb-sm-0" data-id="{{ $product->id }}" data-token="{{ @csrf_token() }}"><i
+                <button class="btn btn-cart btn-primary btn-animated mr-sm-4 mb-3 mb-sm-0" data-id="{{ $product->id }}"
+                        data-token="{{ @csrf_token() }}"><i
                         class="las la-shopping-cart mr-1"></i>Add To Cart
                 </button>
                 <a class="btn btn-animated btn-dark add-to-wishlist" href="#" data-product="{{ $product->id }}"
-                    data-token="{{ csrf_token() }}"> <i class="lar la-heart mr-1"></i>Add To
+                   data-token="{{ csrf_token() }}"> <i class="lar la-heart mr-1"></i>Add To
                     Wishlist</a>
             </div>
             <div class="d-sm-flex align-items-center border-top pt-4 mt-5">
@@ -91,7 +93,8 @@
                     </li>
                 </ul>
             </div>
+                </span>
         </div>
     </div>
-</div>
+    </div>
 @endif

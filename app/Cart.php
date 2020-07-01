@@ -24,7 +24,7 @@ class Cart
         }
     }
 
-    public function add($product)
+    public function add($product, $qty = 1)
     {
         $storedItem = ['product' => $product, 'price' => $product->sale_price ?? $product->price, 'qty' => 0];
         if ($this->items) {
@@ -33,32 +33,37 @@ class Cart
             }
         }
         $price = $product->sale_price ?? $product->price;
-        $storedItem['qty']++;
+        $storedItem['qty'] += $qty;
         $storedItem['price'] = $price * $storedItem['qty'];
 
         $this->items[$product->id] = $storedItem;
-        $this->totalPrice += $price;
-        $this->totalQty++;
+        $this->totalPrice += $price * $qty;
+        $this->totalQty += $qty;
     }
 
     public function delete($product)
     {
-        if (isset($this->items[$product->id])) {
-            $price = $product->sale_price ?? $product->price;
-            $this->totalPrice = $this->totalPrice - $price;
-            if ($this->items[$product->id]) {
-                if ($this->items[$product->id]['qty'] > 1) {
-                    $this->items[$product->id]['qty']--;
-                    $this->items[$product->id]['price'] = $price * $this->items[$product->id]['qty'];
-                } else {
-                    unset($this->items[$product->id]);
-                }
-
-
-            }
-        }
-
-        $this->totalQty--;
+//        if (isset($this->items[$product->id])) {
+//            $price = $product->sale_price ?? $product->price;
+//            $this->totalPrice = $this->totalPrice - $price;
+//            if ($this->items[$product->id]) {
+//                if ($this->items[$product->id]['qty'] > 1) {
+//                    $this->items[$product->id]['qty']--;
+//                    $this->items[$product->id]['price'] = $price * $this->items[$product->id]['qty'];
+//                } else {
+//                    unset($this->items[$product->id]);
+//                }
+//            }
+//        }
+//
+//        $this->totalQty--;
+//        if ($this->totalQty == 0) {
+//            session()->forget('cart');
+//        }
+        $price = $product->sale_price ?? $product->price;
+        $this->totalPrice -= $price * $this->items[$product->id]['qty'];
+        $this->totalQty -= $this->items[$product->id]['qty'];
+        unset($this->items[$product->id]);
         if ($this->totalQty == 0) {
             session()->forget('cart');
         }

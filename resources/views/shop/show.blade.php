@@ -51,18 +51,25 @@
                     </div>
                     <div class="col-lg-6 col-12 mt-5 mt-lg-0">
                         <div class="product-details">
+                            <span class="card-wrapper">
                             <h3 class="mb-0 text-capitalize">
                                 {{ $product->title }}
                             </h3>
-                            <div class="star-rating mb-4"><i class="las la-star"></i><i class="las la-star"></i><i
-                                    class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                            <div class="star-rating mb-4">
+
+
+                                @if($product->rate)
+                                    @foreach(range(1, $product->rate) as $rate)
+                                        <i class="las la-star"></i>
+                                    @endforeach
+                                @endif
                             </div>
                             @if($product->sale_price)
-                                <span class="product-price h4">${{ $product->sale_price }} <del
-                                        class="text-muted h6">${{ $product->price }}</del></span>
-                            @else
-                                <span class="product-price h4">${{ $product->price }}</span>
-                            @endif
+                                    <span class="product-price h4">${{ $product->sale_price }} <del
+                                            class="text-muted h6">${{ $product->price }}</del></span>
+                                @else
+                                    <span class="product-price h4">${{ $product->price }}</span>
+                                @endif
                             <ul class="list-unstyled my-4">
                                 <li class="mb-2">Availibility:
                                     @if($product->status)
@@ -81,7 +88,7 @@
                                 <div class="d-flex align-items-center mr-sm-4">
                                     <button class="btn-product btn-product-up"><i class="las la-minus"></i>
                                     </button>
-                                    <input class="form-product" type="number" name="form-product" value="1">
+                                    <input class="form-product product-qty" type="number" name="form-product" value="1">
                                     <button class="btn-product btn-product-down"><i class="las la-plus"></i>
                                     </button>
                                 </div>
@@ -132,6 +139,7 @@
                                     </li>
                                 </ul>
                             </div>
+                        </span>
                         </div>
                     </div>
                 </div>

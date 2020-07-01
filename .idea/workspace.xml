@@ -13,6 +13,9 @@
       <executable path="composer" />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
@@ -122,6 +125,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1dfibF7y42edmgonpz2sjlbVNEv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -261,6 +265,13 @@
       <workItem from="1593607230302" duration="1803000" />
       <workItem from="1593609045605" duration="1795000" />
       <workItem from="1593610852399" duration="160000" />
+      <workItem from="1593612979576" duration="1798000" />
+      <workItem from="1593614821972" duration="1886000" />
+      <workItem from="1593617742022" duration="277000" />
+      <workItem from="1593618031182" duration="1000" />
+      <workItem from="1593620003429" duration="1801000" />
+      <workItem from="1593621814730" duration="1793000" />
+      <workItem from="1593623620296" duration="518000" />
     </task>
     <servers />
   </component>
@@ -316,18 +327,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="801" y="442" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593601008397" />
-    <state x="663" y="343" width="607" height="351" key="com.intellij.ide.util.TipDialog" timestamp="1593610852438">
+    <state x="663" y="343" width="607" height="351" key="com.intellij.ide.util.TipDialog" timestamp="1593623620266">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="663" y="343" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593610852438" />
+    <state x="663" y="343" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593623620266" />
     <state x="623" y="242" key="run.anything.popup" timestamp="1593430653460">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593430653460" />
-    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1593601966163">
+    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1593620886518">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593601966163" />
+    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593620886518" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -336,6 +347,11 @@
           <url>file://$PROJECT_DIR$/database/factories/AttributeFactory.php</url>
           <line>4</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/shop/show.blade.php</url>
+          <line>86</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -53,7 +53,7 @@
                                     @foreach($cart->items as $item)
 
                                         @php $product = $item['product'] @endphp
-                                        <tr>
+                                        <tr class="cart-row">
                                             <td>
                                                 <div class="media align-items-center">
                                                     <a href="#">
@@ -126,7 +126,7 @@
                             @if($cart)
                                 <h4 class="text-black text-center mb-2">Cart Totals</h4>
                                 <div class="d-flex justify-content-between align-items-center border-bottom py-3"><span
-                                        class="text-muted">Subtotal</span> <span class="text-dark">${{ $cart->totalPrice }}</span>
+                                        class="text-muted">Subtotal</span> <span class="text-dark subtotal-cart">${{ $cart->totalPrice }}</span>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center border-bottom py-3"><span
                                         class="text-muted">Tax</span> <span class="text-dark">$00.00</span>

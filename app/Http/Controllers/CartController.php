@@ -21,10 +21,11 @@ class CartController extends Controller
     public function store()
     {
         $id = request()->get('id');
+        $qty = \request()->get('qty');
         $product = Product::findOrFail($id);
         $cart = session()->get('cart') ? session()->get('cart') : null;
         $cart = new Cart($cart);
-        $cart->add($product);
+        $cart->add($product, $qty);
         session()->put('cart', $cart);
         return view('layouts.footer.modals.cartmodal-ajax', compact('cart'));
     }
