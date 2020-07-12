@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+
 @section('content')
 
     <!--hero section start-->
@@ -54,7 +55,7 @@
 
         <!--multi sec start-->
 
-    @include('main.includes.subscribe')
+{{--    @include('main.includes.subscribe')--}}
 
 
     <!--multi sec end-->

@@ -15,9 +15,9 @@
         </form>
     @endguest
     <a class="card-img-hover d-block" href="{{ route('shop.show', $product) }}">
-        <img class="card-img-top card-img-back" src="/assets/images/product/07.jpg"
+        <img class="card-img-top card-img-back" src="{{ url('storage/'. $product->image) }}"
              alt="...">
-        <img class="card-img-top card-img-front" src="/assets/images/product/08.jpg"
+        <img class="card-img-top card-img-front" src="{{ url('storage/'. $product->image) }}"
              alt="...">
     </a>
     <div class="card-info">

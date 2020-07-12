@@ -19,10 +19,10 @@ class ProductSeeder extends Seeder
             static $image = 1;
             $product->gallery()->create([
                 'image' => serialize(array([
-                    $image++ . '.jpg',
-                    $image++ . '.jpg',
-                    $image++ . '.jpg',
-                    $image++ . '.jpg'
+                    '1.jpg',
+                    '2.jpg',
+                    '3.jpg',
+                    '4.jpg',
                 ])),
                 'product_id' => $product
             ]);

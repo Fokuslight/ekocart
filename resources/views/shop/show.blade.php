@@ -171,7 +171,7 @@
                                 <div role="tabpanel" class="tab-pane fade show active" id="tab3-1">
                                     <div class="row align-items-center">
                                         <div class="col-md-5">
-                                            <img class="img-fluid w-100" src="assets/images/product/large/01.jpg"
+                                            <img class="img-fluid w-100" src="{{ url('/storage/' . $product->image) }}"
                                                  alt="">
                                         </div>
                                         <div class="col-md-7 mt-5 mt-lg-0">

@@ -7,7 +7,7 @@
             </div>
             <!-- Image -->
             <a href="product-left-image.html">
-                <img class="img-fluid" src="/assets/images/product/01.jpg" alt="...">
+                <img class="img-fluid" src="{{ url('/storage/' . $product->image) }}" alt="...">
             </a>
         </div>
         <div class="col-7">

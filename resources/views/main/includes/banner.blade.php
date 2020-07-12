@@ -7,7 +7,7 @@
                         <h6 class="font-w-6 text-primary animated3">Welcome Ekocart</h6>
                         <h1 class="mb-4 animated3">A New Online<br> Shop experience</h1>
                         <div class="animated3">
-                            <a class="btn btn-primary btn-animated" href="#">Shop Now</a>
+                            <a class="btn btn-primary btn-animated" href="{{ route('shop.index') }}">Shop Now</a>
                         </div>
                         <div class="hero-circle animated4"></div>
                     </div>
@@ -21,7 +21,7 @@
                         <h6 class="font-w-6 text-primary animated3">2020 Latest Style</h6>
                         <h1 class="mb-4 animated3">Trending Men's Collection</h1>
                         <div class="animated3">
-                            <a class="btn btn-primary btn-animated" href="#">View Collection</a>
+                            <a class="btn btn-primary btn-animated" href="{{ route('shop.index') }}">View Collection</a>
                         </div>
                         <div class="hero-circle animated4"></div>
                     </div>

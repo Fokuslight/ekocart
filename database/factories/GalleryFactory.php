@@ -10,10 +10,10 @@ $factory->define(Gallery::class, function (Faker $faker) {
     static $image = 1;
     return [
         'image' => serialize(array([
-            $image++ . ',jpeg',
-            $image++ . ',jpeg',
-            $image++ . ',jpeg',
-            $image++ . ',jpeg'
+            $image++ . ',jpg',
+            $image++ . ',jpg',
+            $image++ . ',jpg',
+            $image++ . ',jpg'
         ])),
         'product_id' => $product->random()
     ];

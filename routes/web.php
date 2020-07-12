@@ -30,6 +30,7 @@ Route::patch('/profiles/{profile}', 'ProfileController@update')->name('profile.u
 Route::get('/cart/create', 'CartController@create')->name('cart.create');
 Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
+Route::patch('/cart/{product}', 'CartController@update')->name('cart.update');
 
 Route::get('/checkout/create', 'CheckoutController@create')->name('checkout.create');
 Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');

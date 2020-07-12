@@ -156,13 +156,39 @@ jQuery(document).ready(function ($) {
             },
             success: function (data) {
                 $('#cartModal .modal-body').html(data);
-                $this.closest('.cart-row').remove();
+                $(".cart-product-delete[data-id='" + id + "']").closest('.cart-row').remove();
                 findTotalQty();
             },
             error: function () {
             }
         });
 
+    });
+
+    $body.on('click', '.btn-cart-reload', function () {
+        var $this = $(this),
+            totalQty = $this.siblings('.product-qty').val(),
+            id = $this.data('id'),
+            token = $this.data('token');
+        $.ajax({
+            url: '/cart/' + id,
+            data: {
+                id: id,
+                totalQty: totalQty,
+                _token: token,
+                _method: 'PATCH'
+            },
+            type: 'POST',
+            beforeSend: function () {
+            },
+            success: function (data) {
+                console.log(data);
+                $('#cartModal .modal-body').html(data);
+                findTotalQty();
+            },
+            error: function () {
+            }
+        });
     });
 
     findTotalQty();
@@ -180,6 +206,17 @@ jQuery(document).ready(function ($) {
         $('.nav-cart-total-price').html(totalPrice);
         if ($('.subtotal-cart')[0]) {
             $('.subtotal-cart').html(totalPrice);
+        }
+
+        if ($('.cart-table')[0]) {
+            $('.cart-table').find('.cart-product-total-price').each(function () {
+                $productCartWrapper = $(this).closest('.card-wrapper');
+                var productCartPrice = $productCartWrapper.find('.product-cart-price').text(),
+                    productCartQty = $productCartWrapper.find('.product-qty').val(),
+                    productCartTotalPrice = $productCartWrapper.find('.cart-product-total-price');
+                productCartTotalPrice.html('$' + (productCartPrice * productCartQty));
+
+            });
         }
 
     }
@@ -237,5 +274,6 @@ jQuery(document).ready(function ($) {
     $('.btn-search').on('click', function (e) {
         e.preventDefault();
     });
+
 
 });

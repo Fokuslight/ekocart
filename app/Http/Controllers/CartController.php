@@ -12,8 +12,13 @@ class CartController extends Controller
     {
 
         $cart = session()->get('cart') ? session()->get('cart') : null;
-       // $cart = new Cart($cart);
+  //      session()->forget('cart');
+
+         $cart = new Cart($cart);
 //        $product = Product::find(1);
+//
+//        $cart->add($product, 1);
+//        $cart->refresh($product, 2);
 //        $cart->delete($product);
         return view('cart.create', compact('cart'));
     }
@@ -32,11 +37,20 @@ class CartController extends Controller
 
     public function destroy(Product $product)
     {
-
-
         $cart = session()->get('cart') ? session()->get('cart') : null;
         $cart = new Cart($cart);
         $cart->delete($product);
+        session()->put('cart', $cart);
+        return view('layouts.footer.modals.cartmodal-ajax', compact('cart'));
+    }
+
+
+    public function update(Product $product)
+    {
+        $totalQty = \request()->get('totalQty');
+        $cart = session()->get('cart') ? session()->get('cart') : null;
+        $cart = new Cart($cart);
+        $cart->refresh($product, $totalQty);
         session()->put('cart', $cart);
         return view('layouts.footer.modals.cartmodal-ajax', compact('cart'));
     }

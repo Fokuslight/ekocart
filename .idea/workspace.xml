@@ -134,20 +134,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/checkout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/public" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\wamp\www\Ekocart\resources\views\checkout" />
-      <recent name="E:\wamp\www\Ekocart\resources\views\profile" />
-      <recent name="E:\wamp\www\Ekocart\storage\app\public" />
-      <recent name="E:\wamp\www\Ekocart\resources\views\layouts\footer\modals" />
-      <recent name="E:\wamp\www\Ekocart\public\assets\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\wamp\www\Ekocart\resources\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\wamp\www\Ekocart\storage\app\public" />
+      <recent name="E:\wamp\www\Ekocart\resources\views\checkout" />
+      <recent name="E:\wamp\www\Ekocart\resources\views\profile" />
+      <recent name="E:\wamp\www\Ekocart\resources\views\layouts\footer\modals" />
+      <recent name="E:\wamp\www\Ekocart\public\assets\js" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -271,7 +271,17 @@
       <workItem from="1593618031182" duration="1000" />
       <workItem from="1593620003429" duration="1801000" />
       <workItem from="1593621814730" duration="1793000" />
-      <workItem from="1593623620296" duration="518000" />
+      <workItem from="1593623620296" duration="626000" />
+      <workItem from="1593632754434" duration="3000" />
+      <workItem from="1593692839490" duration="632000" />
+      <workItem from="1594552225390" duration="55000" />
+      <workItem from="1594552288008" duration="1932000" />
+      <workItem from="1594554231538" duration="2241000" />
+      <workItem from="1594556700930" duration="1796000" />
+      <workItem from="1594558505605" duration="1795000" />
+      <workItem from="1594560311574" duration="1795000" />
+      <workItem from="1594562117443" duration="1794000" />
+      <workItem from="1594563922327" duration="743000" />
     </task>
     <servers />
   </component>
@@ -327,18 +337,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="801" y="442" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593601008397" />
-    <state x="663" y="343" width="607" height="351" key="com.intellij.ide.util.TipDialog" timestamp="1593623620266">
+    <state x="663" y="343" width="607" height="351" key="com.intellij.ide.util.TipDialog" timestamp="1594563922026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="663" y="343" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593623620266" />
-    <state x="623" y="242" key="run.anything.popup" timestamp="1593430653460">
+    <state x="663" y="343" width="607" height="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594563922026" />
+    <state x="623" y="242" key="run.anything.popup" timestamp="1594555646999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593430653460" />
-    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1593620886518">
+    <state x="623" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594555646999" />
+    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1594559524685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593620886518" />
+    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594559524685" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

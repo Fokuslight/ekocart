@@ -176,15 +176,15 @@
                                         <label class="custom-control-label" for="customRadio3">Paypal Account</label>
                                     </div>
                                 </div>
-                                <div class="form-group mb-0">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                        <label class="custom-control-label" for="customCheck1">I have read and accept
-                                            the terms and conditions</label>
-                                    </div>
-                                </div>
+{{--                                <div class="form-group mb-0">--}}
+{{--                                    <div class="custom-control custom-checkbox">--}}
+{{--                                        <input type="checkbox" class="custom-control-input" id="customCheck1">--}}
+{{--                                        <label class="custom-control-label" for="customCheck1">I have read and accept--}}
+{{--                                            the terms and conditions</label>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                             </div>
-                            <button class="btn btn-primary btn-animated btn-block">Proceed to Payment</button>
+{{--                            <button class="btn btn-primary btn-animated btn-block">Proceed to Payment</button>--}}
                         </div>
                     </div>
                 </div>

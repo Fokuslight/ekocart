@@ -70,7 +70,7 @@
                     <!--menu start-->
                     <div class="col">
                         <nav class="navbar navbar-expand-lg navbar-light position-static">
-                            <a class="navbar-brand logo d-lg-none" href="index.html">
+                            <a class="navbar-brand logo d-lg-none" href="{{ route('main.index') }}">
                                 <img class="img-fluid" src="{{ url('assets/images/logo.png') }}" alt="">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"

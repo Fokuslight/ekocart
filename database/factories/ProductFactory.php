@@ -9,7 +9,7 @@ use App\Product;
 use Faker\Generator as Faker;
 
 $factory->define(Product::class, function (Faker $faker) {
-    static $image = 1;
+
     $price = random_int(50, 1000);
     return [
         'title' => $faker->word(),
@@ -17,7 +17,7 @@ $factory->define(Product::class, function (Faker $faker) {
         'group' => random_int(1, 20),
         'price' => $price,
         'sale_price' => $faker->randomElement([null, $price-40]),
-        'image' => $image++ . '.jpg',
+        'image' => random_int(1, 16) . '.jpg',
         'caption' => $faker->text(120),
         'description' => $faker->text(700),
         'category_id' => Category::get()->random(),

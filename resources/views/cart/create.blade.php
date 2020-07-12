@@ -53,14 +53,14 @@
                                     @foreach($cart->items as $item)
 
                                         @php $product = $item['product'] @endphp
-                                        <tr class="cart-row">
-                                            <td>
+                                        <tr class="cart-row card-wrapper">
+                                            <td class="w-50">
                                                 <div class="media align-items-center">
-                                                    <a href="#">
-                                                        <img class="img-fluid" src="/storage/01.jpg"
+                                                    <a href="{{ route('shop.show', $product) }}" class="w-25">
+                                                        <img class="img-fluid " src="{{ url('/storage/' . $product->image) }}"
                                                              alt="{{ $product->title }}">
                                                     </a>
-                                                    <div class="media-body ml-3">
+                                                    <div class="media-body ml-3 text-center">
                                                         <div class="product-title mb-2"><a class="link-title"
                                                                                            href="{{ route('shop.show', $product) }}">
                                                                 {{$product->title}}
@@ -73,26 +73,26 @@
 
                                                 @if($product->sale_price)
                                                     <span
-                                                        class="product-price text-muted">${{ $product->sale_price }}</span>
+                                                        class="product-price text-muted">$ <span class="product-cart-price">{{ $product->sale_price }}</span></span>
                                                 @else
                                                     <span
-                                                        class="product-price text-muted">${{ $product->price }}</span>
+                                                        class="product-price text-muted">$ <span class="product-cart-price">{{ $product->price }}</span></span>
                                                 @endif
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-center align-items-center">
-                                                    <button class="btn-product btn-product-up"><i
+                                                    <button data-id="{{ $product->id }}" data-token="{{ @csrf_token() }}" class="btn-cart-reload btn-product btn-product-up"><i
                                                             class="las la-minus"></i>
                                                     </button>
-                                                    <input class="form-product" type="number" name="form-product"
+                                                    <input class="form-product product-qty" type="number" name="form-product"
                                                            value="{{ $item['qty'] }}">
-                                                    <button class="btn-product btn-product-down"><i
+                                                    <button data-id="{{ $product->id }}" data-token="{{ @csrf_token() }}" class="btn-cart-reload btn-product btn-product-down"><i
                                                             class="las la-plus"></i>
                                                     </button>
                                                 </div>
                                             </td>
                                             <td><span
-                                                    class="product-price text-dark font-w-6">${{ $item['price'] }}</span>
+                                                    class="product-price cart-product-total-price text-dark font-w-6">${{ $item['price'] }}</span>
                                                 <button data-id="{{ $product->id }}" data-token="{{ csrf_token() }}" type="submit" class="btn btn-primary btn-sm ml-5 cart-product-delete"><i
                                                         class="las la-times"></i>
                                                 </button>
@@ -104,21 +104,21 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="d-md-flex align-items-end justify-content-between border-top pt-5">
-                            <div>
-                                <label class="text-black h4" for="coupon">Coupon</label>
-                                <p>Enter your coupon code if you have one.</p>
-                                <div class="row form-row">
-                                    <div class="col">
-                                        <input class="form-control" id="coupon" placeholder="Coupon Code" type="text">
-                                    </div>
-                                    <div class="col col-auto">
-                                        <button class="btn btn-dark btn-animated">Apply Coupon</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="btn btn-primary btn-animated mt-3 mt-md-0">Update Cart</button>
-                        </div>
+{{--                        <div class="d-md-flex align-items-end justify-content-between border-top pt-5">--}}
+{{--                            <div>--}}
+{{--                                <label class="text-black h4" for="coupon">Coupon</label>--}}
+{{--                                <p>Enter your coupon code if you have one.</p>--}}
+{{--                                <div class="row form-row">--}}
+{{--                                    <div class="col">--}}
+{{--                                        <input class="form-control" id="coupon" placeholder="Coupon Code" type="text">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col col-auto">--}}
+{{--                                        <button class="btn btn-dark btn-animated">Apply Coupon</button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <button class="btn btn-primary btn-animated mt-3 mt-md-0">Update Cart</button>--}}
+{{--                        </div>--}}
                     </div>
                     <div class="col-lg-4 pl-lg-5 mt-8 mt-lg-0">
                         <div class="shadow rounded p-5">
@@ -133,7 +133,7 @@
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center pt-3 mb-5"><span
                                         class="text-dark h5">Total</span> <span
-                                        class="text-dark font-weight-bold h5">$59.00</span>
+                                        class="text-dark font-weight-bold h5 subtotal-cart">${{ $cart->totalPrice }}</span>
                                 </div>
                                 <a class="btn btn-primary btn-animated btn-block" href="{{ route('checkout.create') }}">Proceed
                                     To Checkout</a>
