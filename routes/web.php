@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'MainController@index')->name('main.index');
+Route::get('/main', 'MainController@index')->name('main.index');
 
 Auth::routes();
 
